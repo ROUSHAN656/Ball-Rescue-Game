@@ -24,10 +24,15 @@ function animate(){
     function move(e){
         // console.log(e.keyCode);
         if(e.keyCode==39){
-            pad_x+=pad_dx;
+           
+            if(pad_x<800){
+                pad_x+=pad_dx;
+            }
         }
         if(e.keyCode==37){
+            if(pad_x>0){
             pad_x-=pad_dx;
+            }
         }
 
         canvas.width=900;
