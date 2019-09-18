@@ -1,2 +1,3 @@
 # Game
-SNAKE GAME
+Canvas Game
+
