@@ -1,0 +1,12 @@
+.startButton{
+    width: 300px;
+    height: 80px;
+    background-image: linear-gradient(27deg,#ff4949,#ffa9a9);
+    border-radius: 35px;
+    cursor: pointer;
+
+}
+.playGame{
+    color:rgb(83, 32, 32);
+    font-weight: bold;
+}
