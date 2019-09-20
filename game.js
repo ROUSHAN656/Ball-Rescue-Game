@@ -5,26 +5,23 @@ canvas.height=500;
 let c=canvas.getContext("2d");
 
  c.fillStyle="rgba(255,0,0,0.5)";
-
-
-let x=200;
-let y=200;
-let pad_x=0;
+let x=Math.random()* canvas.width;
+let y=100;
+let pad_x=400;
 let pad_dx=20;
-let dx=4;
-let dy=4;
+let dx=3;
+let dy=3;
 let radius=30;
 let innerHeight=500;
 let innerWidth=900;
+var newScore=0;
 function animate(){
     c.clearRect(0,0,innerWidth,innerHeight); 
     requestAnimationFrame(animate);
-    c.fillRect(pad_x,475,100,20);
+    c.fillRect(pad_x,480,100,20);
     document.onkeydown=move;
     function move(e){
-        // console.log(e.keyCode);
-        if(e.keyCode==39){
-           
+        if(e.keyCode==39){           
             if(pad_x<800){
                 pad_x+=pad_dx;
             }
@@ -34,61 +31,57 @@ function animate(){
             pad_x-=pad_dx;
             }
         }
-
         canvas.width=900;
-        c.fillRect(pad_x,475,100,20);
-
-    }
+        c.fillRect(pad_x,475,100,20);    
+}
     c.beginPath();
     c.arc(x,y,radius,0,Math.PI*2,false);
+    c.fillStyle="red";
+    c.fill();
     c.strokeStyle='red';
     c.stroke();
     
 if(x+radius>innerWidth || x-radius < 0){
     dx=-dx;
 }
-if(y+radius>innerHeight || y-radius < 0){
+if(y-radius < 0){
     dy=-dy;
 }
-
+    if((y+radius)>innerHeight){
+            if((x>pad_x)&&(x<pad_x+100)){
+                console.log("here")
+                dy=-dy;
+                newScore+=1;
+                document.getElementById("score").innerHTML=newScore;             
+            }
+            else{
+            //    alert("over");
+            //    alert("game over");
+                x = Math.random()* canvas.width;
+                y = 100;
+                newScore = 0;
+                document.getElementById("score").innerHTML=newScore;
+                // $("#gameOver").show();
+                $("#agian").show;
+                
+               window.location.reload();                
+            }
+    }
     x+=dx;
     y+=dy;
-    // console.log('pop');
-}
+    }
+    //animate();
+$("#start").click(function(){
+    animate();
+    $("#start").hide();
+})  
+// $("#agian").click(function(){
+//     animate();
+// })
 
 
-animate();
 
 
 
 
 
-
-
-// c.fillRect(100,100,100,100);
-// c.fillStyle="rgba(0,0,255,0.5)";
-// c.fillRect(300,300,100,100);
-// c.fillStyle="rgba(0,255,0,0.5)";
-// c.fillRect(500,100,100,100);
-// console.log(canvas);  
-
-//line
-
-// c.beginPath();
-// c.moveTo(50,300);
-// c.lineTo(100,100);
-// c.stroke();
-// //c.beginPath();
-// c.moveTo(100,600);
-// c.lineTo(500,300);
-// c.stroke();
-
-//circle
-// for(let i=0;i<3;i++){
-//     let x=Math.random()* window.innerWidth;
-//     let y=Math.random()* window.innerHeight;
-// c.beginPath();
-// c.arc(x,y,30,0,Math.PI*2,false);
-// c.strokeStyle='red';
-// c.stroke();
-// }
