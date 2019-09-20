@@ -16,3 +16,18 @@ h3{
     margin-top: 158%;
     /* display: none; */
 }
+#start{
+    position: absolute;
+    top: 91.5%;
+    height: 40px;
+    width: 120px;
+    border-radius: 10px;
+    border: none;
+    background-color: aqua;
+    cursor: pointer;
+}
+span{
+    position: relative;
+    top: 15%;
+    left: 35%;
+}

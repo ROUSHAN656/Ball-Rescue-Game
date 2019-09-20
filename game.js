@@ -15,6 +15,11 @@ let radius=30;
 let innerHeight=500;
 let innerWidth=900;
 var newScore=0;
+if(localStorage.hasOwnProperty('hs')){
+    document.getElementById("highScore").innerHTML=parseInt(localStorage.getItem("hs"));
+}
+
+
 function animate(){
     c.clearRect(0,0,innerWidth,innerHeight); 
     requestAnimationFrame(animate);
@@ -52,13 +57,19 @@ if(y-radius < 0){
                 console.log("here")
                 dy=-dy;
                 newScore+=1;
-                document.getElementById("score").innerHTML=newScore;             
+                document.getElementById("score").innerHTML=newScore; 
+                         
             }
             else{
             //    alert("over");
             //    alert("game over");
                 x = Math.random()* canvas.width;
                 y = 100;
+                if(newScore>localStorage.getItem("hs")){
+                localStorage.setItem("hs",newScore);
+                }
+                
+                //console.log(localStorage.getItem("hs"));  
                 newScore = 0;
                 document.getElementById("score").innerHTML=newScore;
                 // $("#gameOver").show();
