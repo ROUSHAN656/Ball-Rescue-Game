@@ -1,6 +1,5 @@
-// Author:- Satyajit Dash and Roushan Raj
-// Game Title:- Ball Rescue
-
+// // Author:- Satyajit Dash and Roushan Raj
+// // Game Title:- Ball Rescue
 
 let canvas=document.querySelector("canvas");
 canvas.width=900;
