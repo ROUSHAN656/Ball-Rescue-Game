@@ -20,7 +20,7 @@ if(localStorage.hasOwnProperty('hs')){
 }
 
 
-function animate(){
+animate=()=>{
     c.clearRect(0,0,innerWidth,innerHeight); 
     requestAnimationFrame(animate);
     c.fillRect(pad_x,480,100,20);
