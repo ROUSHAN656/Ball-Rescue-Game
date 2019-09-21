@@ -5,7 +5,7 @@
     height: 90px;
     background-image: linear-gradient(27deg,#ff4949,#ffa9a9);
     border-radius: 35px;
-    cursor: pointer;    
+    cursor: pointer;   
 }
 /* .logo{
 left: 10%;
@@ -20,12 +20,16 @@ font-family: sans-serif;
 color: #f59c16;
 font-weight: bold;
 font-size: 80px;
-stroke: tomato
+stroke: tomato;
+-webkit-text-stroke-width: 2px;
+-webkit-text-stroke-color: rgb(119, 24, 24);
 }
 .rescue{
 font-family: sans-serif;
 color: #b8e615;
 font-weight: bold;
 font-size: 80px;
-stroke: aqua
+stroke: aqua;
+-webkit-text-stroke-width: 2px;
+-webkit-text-stroke-color: rgb(5, 78, 56);
 }
