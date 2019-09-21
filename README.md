@@ -2,7 +2,11 @@
 
 This is a simple, easy to play yet interesting web based game which is been developed by basic concepts of HTML,CSS,JavaScript and Canvas. It has been developed for learning purposes and it has no commercial scope.
 
+
+Preview :- [https://competent-booth-f11af4.netlify.com/welcome.html](https://competent-booth-f11af4.netlify.com/welcome.html)
+
 Author:-[Satyajit Dash](https://github.com/satyajitdash61) and [Roushan Raj](https://github.com/ROUSHAN656)
+
 
 # About the game #
 
