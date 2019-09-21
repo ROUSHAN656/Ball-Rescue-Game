@@ -11,7 +11,7 @@ Easy and minimal gameplay! To score a point you have to make sure that the ball 
 ## Screenshots #
 
 ![Alt text](https://github.com/ROUSHAN656/Game/blob/master/Screenshot1.png?raw=true)
-![Alt text](https://github.com/ROUSHAN656/Game/blob/master/Screenshot1.png?raw=true)
+![Alt text](https://github.com/ROUSHAN656/Game/blob/master/Screenshot2.png?raw=true)
 
 
 
