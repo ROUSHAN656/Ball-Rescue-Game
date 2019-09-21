@@ -1,7 +1,9 @@
+// getting the canvas
+
 let canvas=document.querySelector("canvas");
 canvas.width=900;
 canvas.height=500;
-
+// getting 2d property
 let c=canvas.getContext("2d");
 
  c.fillStyle="rgba(255,0,0,0.5)";
@@ -15,11 +17,12 @@ let radius=30;
 let innerHeight=500;
 let innerWidth=900;
 var newScore=0;
+// storing the high score in local storage
 if(localStorage.hasOwnProperty('hs')){
     document.getElementById("highScore").innerHTML=parseInt(localStorage.getItem("hs"));
 }
 
-
+// function for the movements
 animate=()=>{
     c.clearRect(0,0,innerWidth,innerHeight); 
     requestAnimationFrame(animate);
