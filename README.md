@@ -1,3 +1,68 @@
-# Game
-Canvas Game
+# BALL RESCUE GAME
+
+This is a simple, easy to play yet interesting web based game which is been developed by basic concepts of HTML,CSS,JavaScript and Canvas. It has been developed for learning purposes and it has no commercial scope.
+
+# About the game #
+
+Easy and minimal gameplay! To score a point you have to make sure that the ball should land only by controling the pad using the two arrow keys(left and right) on the pad and it should not touches the ground. If you fail to do so, Game Over.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
