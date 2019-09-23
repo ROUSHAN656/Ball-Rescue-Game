@@ -1,13 +1,14 @@
 // getting the canvas
 
-let canvas=document.querySelector("canvas");
-canvas.width=900;
-canvas.height=500;
-// getting 2d property
-let c=canvas.getContext("2d");
+class canv{
+   constructor(){
+   this.canvas= /**@type{HTMLCanvasElement} */ (document.querySelector("canvas"));
+   this.canvas.width=900;
+   this.canvas.height=500;
+   this.c1=this.canvas.getContext("2d");
+   this.c1.fillStyle="rgba(255,0,0,0.5)";
+   this.x=Math.random()* this.canvas.width;
 
- c.fillStyle="rgba(255,0,0,0.5)";
-let x=Math.random()* canvas.width;
 let y=100;
 let pad_x=400;
 let pad_dx=20;
