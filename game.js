@@ -40,49 +40,73 @@ if(localStorage.hasOwnProperty('hs')){
       
       
     
-if(x+radius>innerWidth || x-radius < 0){
-    dx=-dx;
+if(this.x+this.radius>this.innerWidth || this.x-this.radius < 0){
+    this.dx=-this.dx;
 }
-if(y-radius < 0){
-    dy=-dy;
+if(this.y-this.radius < 0){
+    this.dy=-this.dy;
 }
-    if((y+radius)>innerHeight){
-            if((x>pad_x)&&(x<pad_x+100)){
+    if((this.y+this.radius)>this.innerHeight){
+            if((this.x>this.pad_x)&&(this.x<this.pad_x+100)){
                 console.log("here")
-                dy=-dy;
-                newScore+=1;
-                document.getElementById("score").innerHTML=newScore; 
+                this.dy=-this.dy;
+                this.newScore+=1;
+                document.getElementById("score").innerHTML=this.newScore; 
                          
             }
             else{
             //    alert("over");
             //    alert("game over");
-                x = Math.random()* canvas.width;
-                y = 100;
-                if(newScore>localStorage.getItem("hs")){
-                localStorage.setItem("hs",newScore);
+                this.x = Math.random()* this.canvas.width;
+                this.y = 100;
+                if(this.newScore>localStorage.getItem("hs")){
+                localStorage.setItem("hs",this.newScore);
                 }
                 
                 //console.log(localStorage.getItem("hs"));  
-                newScore = 0;
-                document.getElementById("score").innerHTML=newScore;
+                this.newScore = 0;
+                document.getElementById("score").innerHTML=this.newScore;
                 // $("#gameOver").show();
                 $("#agian").show;
                 
                window.location.reload();                
             }
     }
-    x+=dx;
-    y+=dy;
+    this.x+=this.dx;
+    this.y+=this.dy;
     }
-    //animate();
-$("#start").click(function(){
-    animate();
-    $("#start").hide();
-})  
-// $("#agian").click(function(){
-//     animate();
-// })
+      
+ this.move=function(e){
+           if(e===39){
+               if(this.pad_x<800){
+                   this.pad_x+=this.pad_dx;
+               }
+           }
+           if(e===37){
+               if(this.pad_x>0){
+               this.pad_x-=this.pad_dx;
+               }
+           }
+           this.innerWidth=900;
+           this.c1.fillRect(this.pad_x,475,100,20);
+   }
+}
+
+}
+let obj=new canv();
+$("#start").on('click',function(){
+
+   run();
+
+   $("#start").hide();
+})
+function run(){
+   obj.animate();
+   requestAnimationFrame(run);
+}
+document.addEventListener("keydown",function(event){
+   obj.move(event.keyCode);
+  })
 
 
 
