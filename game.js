@@ -46,6 +46,8 @@ if(this.x+this.radius>this.innerWidth || this.x-this.radius < 0){
 if(this.y-this.radius < 0){
     this.dy=-this.dy;
 }
+//      increamenting score
+     
     if((this.y+this.radius)>this.innerHeight){
             if((this.x>this.pad_x)&&(this.x<this.pad_x+100)){
                 console.log("here")
@@ -55,6 +57,7 @@ if(this.y-this.radius < 0){
                          
             }
             else{
+            //  When game is over
             //    alert("over");
             //    alert("game over");
                 this.x = Math.random()* this.canvas.width;
@@ -75,13 +78,19 @@ if(this.y-this.radius < 0){
     this.x+=this.dx;
     this.y+=this.dy;
     }
+//     Using arrow keys
       
  this.move=function(e){
+    
+//  right key
+    
            if(e===39){
                if(this.pad_x<800){
                    this.pad_x+=this.pad_dx;
                }
            }
+    
+// left key    
            if(e===37){
                if(this.pad_x>0){
                this.pad_x-=this.pad_dx;
@@ -93,9 +102,10 @@ if(this.y-this.radius < 0){
 }
 
 }
+// creating object
 let obj=new canv();
 $("#start").on('click',function(){
-
+// calling run function
    run();
 
    $("#start").hide();
